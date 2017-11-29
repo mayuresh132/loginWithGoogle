@@ -1,0 +1,39 @@
+.navbar.scrolling-navbar {
+    /* display: none; */
+    background-color: rgba(1, 8, 14, 0.72);
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar.scrolling-navbar {
+        font-weight: 300;
+        background-color: #4285F4;
+    }
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.top-nav-collapse {
+    background-color: #4285F4;
+}
+
+.navbar-brand {
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF;
+    font-size: 30px;
+    margin: 0px;
+}
+
+.usericon {
+    border-radius: 50px;
+}
+
+.btn-primary {
+    background-color: #FF5722;
+}
+
+.angularMess {
+    color: whitesmoke;
+    text-shadow: 2px 2px 1px black;
+}

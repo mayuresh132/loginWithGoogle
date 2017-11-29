@@ -1,0 +1,150 @@
+{
+    "categories": [{
+            "category": {
+                "st_banner": "12-haryana-home.jpg"
+            }
+        },
+        {
+            "category": {
+                "dist_banner": "12-haryana-inner.jpg"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR001",
+                "district_name": "Ambala"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR002",
+                "district_name": "Bhiwani"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR022",
+                "district_name": "Charkhi Dadri"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR003",
+                "district_name": "Faridabad"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR004",
+                "district_name": "Fatehabad"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR005",
+                "district_name": "Gurgaon"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR006",
+                "district_name": "Hisar"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR007",
+                "district_name": "Jhajjar"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR008",
+                "district_name": "Jind"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR009",
+                "district_name": "Kaithal"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR010",
+                "district_name": "Karnal"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR011",
+                "district_name": "Kurukshetra"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR012",
+                "district_name": "Mahendragarh"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR020",
+                "district_name": "Mewat"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR021",
+                "district_name": "Palwal"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR013",
+                "district_name": "Panchkula"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR014",
+                9 "district_name": "Panipat"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR015",
+                "district_name": "Rewari"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR016",
+                "district_name": "Rohtak"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR017",
+                "district_name": "Sirsa"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR018",
+                "district_name": "Sonipat"
+            }
+        },
+        {
+            "category": {
+                "district_id": "HR019",
+                "district_name": "Yamunanagar"
+            }
+        },
+        {
+            "category": {
+                "dist_count": 22
+            }
+        }
+    ]
+}

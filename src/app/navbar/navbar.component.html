@@ -1,0 +1,159 @@
+<section class="google-login-page">
+
+    <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-red scrolling-navbar" [containerInside]="false">
+        <logo>
+            <a class="navbar-brand">
+                <img src="../../assets/img/icon.png" height="40" class="d-inline-block align-top" alt="" (click)="openHome()"> <span class="angularMess">Angular Mess</span>
+            </a>
+        </logo>
+        <links>
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <button type="button" *ngIf="!token" class="btn btn-primary waves-light" (click)="form.show()" mdbRippleRadius>Login / Register</button>
+                </li>
+
+                <li class="nav-item dropdown btn-group" *ngIf="token" dropdown>
+                    <a dropdownToggle type="text" class="nav-link dropdown-toggle" mdbRippleRadius>
+                        <img class="usericon" src="{{imageURL}} " height=40px width=40px> {{name}}</a>
+                    <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                        <a class="dropdown-item waves-light" href="#" mdbRippleRadius>Add Mess</a>
+                        <a class="dropdown-item waves-light" href="#" mdbRippleRadius>My Profile</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a class="dropdown-item waves-light" href="#" mdbRippleRadius (click)="logout()">Log out</a>
+                    </div>
+                </li>
+            </ul>
+        </links>
+    </mdb-navbar>
+    <div mdbModal #form="mdb-modal" class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal" role="document">
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Modal cascading tabs-->
+                <div class="modal-c-tabs">
+
+                    <!-- Tab panels -->
+                    <mdb-tabset #staticTabs [buttonClass]="'nav nav-tabs tabs-2 light-blue darken-3'" [contentClass]="''" class="tab-content">
+                        <!--Panel 7    Sign in-->
+                        <mdb-tab class="tab-pane fade" [class.active]="check" [class.show]="check" [class.in]="check" id="panel7" role="tabpanel" heading="<i class='fa fa-user mr-1'></i> Login">
+
+                            <!--Body-->
+                            <div class="modal-body mb-1">
+
+                                <div class="md-form form-sm" style="
+                        margin-top: 19px;">
+                                    <i class="fa fa-envelope prefix"></i>
+                                    <input mdbActive type="text" id="form22" class="form-control" #email>
+                                    <label for="form22">Your email</label>
+                                </div>
+
+                                <div class="md-form form-sm">
+                                    <i class="fa fa-lock prefix"></i>
+                                    <input mdbActive type="password" id="form23" class="form-control" #pass>
+                                    <label for="form23">Your password</label>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <button class="btn btn-info waves-light" mdbRippleRadius (click)="login(email.value,pass.value)">Log in <i class="fa fa-sign-in ml-1" ></i></button>
+                                </div>
+                                <div class="text-center md-form form-sm">
+                                    <p>OR</p>
+                                </div>
+                                <div class="text-center mt-2">
+
+
+                                    <button id="google-login-button" class="btn btn-gplus waves-light" style="
+                                background: #e92f2f;" (click)=" googleAuthenticate() "><i class="fa fa-google-plus left "></i>Google Sign-In</button>
+
+                                    <!-- <div *ngIf="token ">
+                                    <button class="btn btn-danger " (click)="logout() ">Logout</button>
+                                    <img src="{{imageURL}} " height=100px width=100px>
+                                    <br>
+                                    <b>TOKEN: </b>
+                                    <p>{{token}}</p>
+                                    <p>{{imageURL}}</p>
+                                    <p>{{phone}}sdsd</p>
+                                    <p>{{phone}}</p>
+                                    <b>NAME: </b>
+                                    <p>{{name}}</p>
+                                    <b>EMAIL: </b>
+                                    <p>{{email}}</p>
+
+
+                                </div> -->
+                                </div>
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer display-footer ">
+                                <div class="options text-center text-md-right mt-1 ">
+                                    <p>Not a member?
+                                        <a href="#panel8 " class="blue-text" (click)="check=!check">Sign Up
+                                    </a>
+                                    </p>
+                                    <p>Forgot <a href="# " class="blue-text ">Password?</a></p>
+                                </div>
+                                <button type="button " class="btn btn-outline-info ml-auto " data-dismiss="modal " (click)="form.hide() " mdbRippleRadius>Close</button>
+                            </div>
+
+                        </mdb-tab>
+                        <!--/.Panel 7-->
+
+                        <!--Panel 8-->
+                        <mdb-tab class="tab-pane fade " [class.active]="!check" [class.show]="!check" [class.in]="!check" id="panel8 " role="tabpanel " heading="<i class='fa fa-user-plus mr-1'></i> Register">
+
+                            <!--Body-->
+                            <div class="modal-body">
+                                <div class="md-form form-sm">
+                                    <i class="fa fa-user prefix"></i>
+                                    <input mdbActive type="text" id="fullName" class="form-control">
+                                    <label for="fullName">Your Full Name</label>
+                                </div>
+                                <div class="md-form form-sm">
+                                    <i class="fa fa-phone prefix"></i>
+                                    <input mdbActive type="text" id="Contact" class="form-control">
+                                    <label for="Contact">Your Contact No</label>
+                                </div>
+
+                                <div class="md-form form-sm">
+                                    <i class="fa fa-envelope prefix"></i>
+                                    <input mdbActive type="text" id="form24" class="form-control">
+                                    <label for="form24">Your email</label>
+                                </div>
+
+                                <div class="md-form form-sm">
+                                    <i class="fa fa-lock prefix"></i>
+                                    <input mdbActive type="password" id="form25" class="form-control">
+                                    <label for="form25">Your password</label>
+                                </div>
+
+                                <div class="md-form form-sm">
+                                    <i class="fa fa-lock prefix"></i>
+                                    <input mdbActive type="password" id="form26" class="form-control">
+                                    <label for="form26">Repeat password</label>
+                                </div>
+
+                                <div class="text-center form-sm mt-2">
+                                    <button class="btn btn-info waves-light" mdbRippleRadius>Sign up <i class="fa fa-sign-in ml-1"></i></button>
+                                </div>
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <div class="options text-right">
+                                    <p class="pt-1">Already have an account?
+                                        <a href="#" class="blue-text" (click)="check=!check">Log In
+                                    </a>
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal" (click)="form.hide()" mdbRippleRadius>Close</button>
+                            </div>
+                        </mdb-tab>
+                        <!--/.Panel 8-->
+                    </mdb-tabset>
+
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+</section>

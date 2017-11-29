@@ -1,0 +1,55 @@
+.view {
+    background: url("../../assets/img/Thali5.png")no-repeat center center;
+    /* background: red; */
+    background-size: cover;
+}
+
+.md-form label {
+    color: #f8f9fa;
+}
+
+.md-form label.active {
+    color: #f8f9fa;
+}
+
+.form-control {
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 500px) {
+    .form-inline {
+        margin-top: -180px;
+    }
+    .btnsearch {
+        margin-left: 125px;
+    }
+    .myForm {
+        margin-left: 100px;
+    }
+}
+
+.form-inline {
+    position: fixed;
+}
+
+.form-control[_ngcontent-c2] {
+    width: 200px;
+}
+
+.form-inline[_ngcontent-c2] {
+    position: fixed;
+    background-color: rgba(13, 13, 12, 0.63);
+    padding: 10px;
+    padding-left: 31px;
+    padding-top: 22px;
+}
+
+.btn-primary {
+    background-color: #FF5722;
+}
+
+
+/*
+.card {
+    width: 100px
+} */
